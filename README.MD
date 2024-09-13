@@ -1,4 +1,48 @@
+# Introduction
+Welcome to my analysis of the data job market, with a particular focus on data analyst roles. This project was created out of a desire to navigate and understand the job market more effectively. It examines high-paying skills and those most in demand, with the goal of identifying the best opportunities for data analysts.
 
+The dataset, originally sourced from Luke Barousse's Python course, serves as the foundation for this analysis. It includes comprehensive details on job titles, salaries, locations, and key skills. Through a series of Python scripts, I explore critical questions such as the most in-demand skills, salary patterns, and how skill demand correlates with salary trends in the field of data analytics.
+
+# Questions
+Below are the questions I want to answer in my project:
+
+- What are the skills most in demand for the top 3 most popular data roles?
+- How are in-demand skills trending for Data Analysts?
+- How well do jobs and skills pay for Data Analysts?
+- What are the optimal skills for data analysts to learn? (High Demand AND High Paying)
+
+# Tools Used
+- Python: The core tool for data analysis and insights, using these key libraries:
+    - Pandas Library: For data manipulation.
+    - Matplotlib Library: For data visualization.
+    - Seaborn Library: For more advanced visualization.
+- Jupyter Notebooks: To run Python scripts and integrate notes seamlessly.
+- Pycharm: As the primary development environment.
+
+# Data Preparation and Cleanup
+## Import & Clean Up Data
+I start by importing necessary libraries and loading the dataset, followed by initial data cleaning tasks to ensure data quality.
+```python
+#Importing Libraries
+import ast
+import pandas as pd
+import seaborn as sns
+from datasets import load_dataset
+import matplotlib.pyplot as plt
+
+# Loading Data
+dataset = load_dataset('lukebarousse/data_jobs')
+df = dataset['train'].to_pandas()
+
+# Data Cleanup
+df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])  # converting job_posted_date to datetime object
+df['job_skills'] = df['job_skills'].apply(lambda data: ast.literal_eval(data) if pd.notna(data) else data)  # converting job_skills to list
+```
+## Filter US Jobs
+To focus my analysis on the U.S. job market, I apply filters to the dataset, narrowing down to roles based in the United States.
+```python
+df_US = df[df['job_country'] == 'United States']
+```
 
 # The Analysis
 
@@ -83,3 +127,13 @@ View my notebook with detailed steps here: 5_Optimal_Skills.
 - Commonly required skills like Excel and SQL are prevalent in job listings but tend to have lower median salaries compared to more specialized skills such as Python and Tableau. This suggests that while these common skills are valued, more specialized expertise can lead to higher earnings.
 - The scatter plot indicates that programming skills (colored blue) generally cluster at higher salary levels compared to other categories. This implies that proficiency in programming may offer greater financial benefits in the data analytics field.
 - Database skills (colored red), such as Oracle, are associated with some of the highest salaries among data analyst tools. This indicates a significant demand and high valuation for expertise in data management and manipulation within the industry.
+
+# What I Learned
+Throughout this project, I deepened my understanding of the data analyst job market and enhanced my technical skills in Python, especially in data manipulation and visualization. Here are a few specific things I learned:
+
+- Advanced Python Usage: Utilizing libraries such as Pandas for data manipulation, Seaborn and Matplotlib for data visualization, and other libraries helped me perform complex data analysis tasks more efficiently.
+- Data Cleaning Importance: I learned that thorough data cleaning and preparation are crucial before any analysis can be conducted, ensuring the accuracy of insights derived from the data.
+- Strategic Skill Analysis: The project emphasized the importance of aligning one's skills with market demand. Understanding the relationship between skill demand, salary, and job availability allows for more strategic career planning in the tech industry.
+
+# Conclusion
+Through this project, I gained a deeper understanding of the data analytics job market, specifically the importance of aligning one’s skillset with both demand and salary potential. Foundational skills like SQL and Excel are indispensable for most roles, but mastering more specialized tools and technologies (like Python, Tableau, or advanced databases) opens up higher-paying opportunities.
