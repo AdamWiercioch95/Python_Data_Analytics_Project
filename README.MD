@@ -11,6 +11,7 @@ View my notebook with detailed steps here:
 
 ### Results
 ![Visualization of Top Skills](project/images/skill_demand.png)
+
 *Bar graph visualizing the salary for the top 3 data roles and their top 5 skills associated with each.*
 
 ### Insights
@@ -27,6 +28,7 @@ View my notebook with detailed steps here:
 
 ### Results
 ![Visualization of Skills Trend](project/images/skill_trend.png)
+
 *Line graph visualizing the trending of top skills for data analysts in the US over the months in 2023.*
 
 
@@ -44,6 +46,7 @@ View my notebook with detailed steps here:
 
 ### Results
 ![Visualization of Salary_Distribution](project/images/salary_distribution.png)
+
 *Box plot visualizing the salary distributions for the top 6 data job titles.*
 
 
@@ -57,9 +60,26 @@ View my notebook with detailed steps here:
 Next, I refined my analysis to focus exclusively on data analyst roles. I examined both the highest-paying and most in-demand skills, presenting the results using two bar charts.
 ### Results
 ![Visualization of Highest Paid and Most In-Demand Skills](project/images/highest_paid_and_most_in_demand_skills.png)
+
 *Two bar graphs visualizing the highest paid and most in-demand skills for data analyst in US in 2023*
 
 ### Insights
 - The top graph shows that specialized technical skills like dplyr, Bitbucket, and GitLab are associated with higher salaries, with some reaching up to $200K. This suggests that advanced technical proficiency can significantly boost earning potential. Still we have to remember that this conclusion is based on very few data.
 - The bottom graph highlights that foundational skills like Excel, PowerPoint, and SQL are the most in-demand, even though they may not command the highest salaries. This underscores the importance of these core skills for employability in data analysis roles.
 - There is a clear distinction between the highest-paying skills and those most in demand. Data analysts looking to maximize their career potential should aim to develop a diverse skill set, incorporating both high-paying specialized skills and widely sought-after foundational abilities.
+
+## 4. What is the most optimal skill to learn for Data Analysts
+
+To identify the most optimal skills to learn (both highly paid and in high demand) I calculated the percentage of demand for each skill along with their median salaries. This analysis helps to clearly determine which skills offer the best opportunities for learning.
+
+View my notebook with detailed steps here: 5_Optimal_Skills.
+
+### Results
+![Visualization of Most Optimal Skills to Learn](project/images/optimal_skills.png)
+
+*A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in the US with color labels for technology.*
+
+### Insights
+- Commonly required skills like Excel and SQL are prevalent in job listings but tend to have lower median salaries compared to more specialized skills such as Python and Tableau. This suggests that while these common skills are valued, more specialized expertise can lead to higher earnings.
+- The scatter plot indicates that programming skills (colored blue) generally cluster at higher salary levels compared to other categories. This implies that proficiency in programming may offer greater financial benefits in the data analytics field.
+- Database skills (colored red), such as Oracle, are associated with some of the highest salaries among data analyst tools. This indicates a significant demand and high valuation for expertise in data management and manipulation within the industry.
