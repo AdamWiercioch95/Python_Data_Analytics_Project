@@ -3,6 +3,8 @@ Welcome to my analysis of the data job market, with a particular focus on data a
 
 The dataset, originally sourced from Luke Barousse's Python course, serves as the foundation for this analysis. It includes comprehensive details on job titles, salaries, locations, and key skills. Through a series of Python scripts, I explore critical questions such as the most in-demand skills, salary patterns, and how skill demand correlates with salary trends in the field of data analytics.
 
+In developing the skills necessary for this project, I completed a series of exercises provided by Luke Barousse. You can explore the repository containing these exercises here: [Python_Data_Exercises](https://github.com/AdamWiercioch95/Python_Data_Exercises).
+
 # Questions
 Below are the questions I want to answer in my project:
 
